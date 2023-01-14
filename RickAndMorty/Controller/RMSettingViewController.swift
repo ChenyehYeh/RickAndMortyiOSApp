@@ -16,3 +16,4 @@ final class RMSettingViewController: UIViewController {
         title = "Settings"
     }
 }
+
