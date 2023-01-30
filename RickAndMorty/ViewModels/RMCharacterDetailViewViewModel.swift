@@ -15,6 +15,10 @@ final class RMCharacterDetailViewViewModel {
         
     }
     
+    private var requestUrl: URL? {
+        return URL(string: character.url)
+    }
+    
     public var title: String {
         character.name.uppercased()
     }
