@@ -40,6 +40,7 @@
 		DAB3A25E298300D4004A1AB4 /* RMCharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A25D298300D4004A1AB4 /* RMCharacterDetailView.swift */; };
 		DAB3A2602983010F004A1AB4 /* RMCharacterDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A25F2983010F004A1AB4 /* RMCharacterDetailViewViewModel.swift */; };
 		DAB3A262298472A8004A1AB4 /* RMFooterLoadingCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A261298472A8004A1AB4 /* RMFooterLoadingCollectionReusableView.swift */; };
+		DAB3A264298761BF004A1AB4 /* RMImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3A263298761BF004A1AB4 /* RMImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		DAB3A25D298300D4004A1AB4 /* RMCharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDetailView.swift; sourceTree = "<group>"; };
 		DAB3A25F2983010F004A1AB4 /* RMCharacterDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacterDetailViewViewModel.swift; sourceTree = "<group>"; };
 		DAB3A261298472A8004A1AB4 /* RMFooterLoadingCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFooterLoadingCollectionReusableView.swift; sourceTree = "<group>"; };
+		DAB3A263298761BF004A1AB4 /* RMImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		DA20A7E92970FF9B00B90D72 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DAB3A263298761BF004A1AB4 /* RMImageLoader.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				DA5B6ED72972289800CA4D7B /* RMService.swift in Sources */,
 				DAB3A2602983010F004A1AB4 /* RMCharacterDetailViewViewModel.swift in Sources */,
 				DA20A7F12971007200B90D72 /* RMLocation.swift in Sources */,
+				DAB3A264298761BF004A1AB4 /* RMImageLoader.swift in Sources */,
 				DA5B6EE729738B0F00CA4D7B /* APIResponseTypes.swift in Sources */,
 				DAB3A25E298300D4004A1AB4 /* RMCharacterDetailView.swift in Sources */,
 				DA5B6EDC297229A800CA4D7B /* RMEndpoint.swift in Sources */,
