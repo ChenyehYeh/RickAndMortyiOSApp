@@ -10,6 +10,16 @@ import Foundation
 final class RMCharacterDetailViewViewModel {
     private let character: RMCharater
     
+    enum SectionType: CaseIterable {
+        case photo
+        case information
+        case episodes
+    }
+    
+    public let sections = SectionType.allCases
+    
+    // MARK: - Init
+    
     init(character: RMCharater) {
         self.character = character
         
