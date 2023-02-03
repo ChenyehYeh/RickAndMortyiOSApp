@@ -10,7 +10,7 @@ import UIKit
 protocol RMCharacterListViewDelegate: AnyObject {
     func rmCharacterListView(
         _ characterListView: RMCharacterListView,
-        didSelectCharacter character: RMCharater
+        didSelectCharacter character: RMCharacter
     )
 }
 
@@ -85,7 +85,7 @@ final class RMCharacterListView: UIView {
 }
 
 extension RMCharacterListView: RMCharacterListViewViewModelDelegate {
-    func didSelectCharacter(_ character: RMCharater) {
+    func didSelectCharacter(_ character: RMCharacter) {
         delegate?.rmCharacterListView(self, didSelectCharacter: character)
     }
     

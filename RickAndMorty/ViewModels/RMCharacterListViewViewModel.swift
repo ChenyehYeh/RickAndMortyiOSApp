@@ -11,7 +11,7 @@ protocol RMCharacterListViewViewModelDelegate: AnyObject {
     func didLoadInitialCharacters()
     func didLoadMoreCharacters(with newIndexPaths: [IndexPath])
     
-    func didSelectCharacter(_ character: RMCharater)
+    func didSelectCharacter(_ character: RMCharacter)
 }
 
 /// View Model to handle character list view logic
@@ -21,7 +21,7 @@ final class RMCharacterListViewViewModel: NSObject {
     
     private var isLoadingMoreCharacters = false
     
-    private var characters: [RMCharater] = [] {
+    private var characters: [RMCharacter] = [] {
         didSet {
             for character in characters {
                 let viewModel = RMCharacterCollectionViewCellViewModel(

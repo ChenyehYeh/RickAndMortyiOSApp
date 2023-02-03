@@ -53,8 +53,6 @@ final class RMCharacterDetailView: UIView {
             collectionView.leftAnchor.constraint(equalTo: leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-        
         ])
     }
     
@@ -63,8 +61,13 @@ final class RMCharacterDetailView: UIView {
             return self.createSection(for: sectionIndex)
         }
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self,
-                                 forCellWithReuseIdentifier: "cell")
+        collectionView.register(RMCharacterPhotoCollectionViewCell.self,
+                                forCellWithReuseIdentifier: RMCharacterPhotoCollectionViewCell.cellIdentifer)
+        collectionView.register(RMCharacterInfoCollectionViewCell.self,
+                                forCellWithReuseIdentifier: RMCharacterInfoCollectionViewCell.cellIdentifer)
+        collectionView.register(RMCharacterEpisodeCollectionViewCell.self,
+                                forCellWithReuseIdentifier: RMCharacterEpisodeCollectionViewCell.cellIdentifer)
+        
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }
@@ -72,7 +75,6 @@ final class RMCharacterDetailView: UIView {
     private func createSection(for sectionIndex: Int) -> NSCollectionLayoutSection {
         
         let sectionTypes = viewModel.sections
-            
         switch sectionTypes[sectionIndex] {
         case .photo:
             return viewModel.createPhotoSectionLayout()
@@ -80,7 +82,6 @@ final class RMCharacterDetailView: UIView {
             return viewModel.createInfoSectionLayout()
         case .episodes:
             return viewModel.createEpisodeSectionLayout()
-
         }
     }
 }
