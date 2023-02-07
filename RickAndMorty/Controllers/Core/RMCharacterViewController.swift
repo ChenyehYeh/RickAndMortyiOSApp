@@ -2,7 +2,7 @@
 import UIKit
 
 
-/// Controller to show and search for Chararters
+/// Controller to show and search for Characters
 final class RMCharacterViewController: UIViewController,RMCharacterListViewDelegate {
 
     private let characterListView = RMCharacterListView()

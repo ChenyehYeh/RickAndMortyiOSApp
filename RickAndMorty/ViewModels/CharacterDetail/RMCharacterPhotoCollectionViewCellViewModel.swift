@@ -20,7 +20,7 @@ final class RMCharacterPhotoCollectionViewCellViewModel {
             completion(.failure(URLError(.badURL)))
             return
         }
-        RMImageLoader.shared.downLoadImage(imageUrl, completion: completion)
+        RMImageLoader.shared.downloadImage(imageUrl, completion: completion)
     }
-        
+    
 }

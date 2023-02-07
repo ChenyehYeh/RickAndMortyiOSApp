@@ -1,5 +1,5 @@
 //
-//  RMSettingViewController.swift
+//  RMSettingsViewController.swift
 //  RickAndMorty
 //
 //  Created by Chenyeh Yeh on 1/12/23.
@@ -8,7 +8,7 @@
 import UIKit
 
 /// Controller to show various app options and settings
-final class RMSettingViewController: UIViewController {
+final class RMSettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

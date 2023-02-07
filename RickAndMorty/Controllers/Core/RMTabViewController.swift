@@ -13,7 +13,7 @@ final class RMTabBarController: UITabBarController {
         let charactersVC = RMCharacterViewController()
         let locationsVC = RMLocationViewController()
         let episodesVC = RMEpisodeViewController()
-        let settingsVC = RMSettingViewController()
+        let settingsVC = RMSettingsViewController()
         
         charactersVC.navigationItem.largeTitleDisplayMode = .automatic
         locationsVC.navigationItem.largeTitleDisplayMode = .automatic
@@ -32,7 +32,7 @@ final class RMTabBarController: UITabBarController {
         nav2.tabBarItem = UITabBarItem(title: "Locations",
                                        image: UIImage(systemName: "globe"),
                                        tag: 2)
-        nav3.tabBarItem = UITabBarItem(title: "Eipsodes",
+        nav3.tabBarItem = UITabBarItem(title: "Episodes",
                                        image: UIImage(systemName: "tv"),
                                        tag: 3)
         nav4.tabBarItem = UITabBarItem(title: "Settings",

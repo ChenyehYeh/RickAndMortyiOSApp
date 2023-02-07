@@ -39,7 +39,7 @@ final class RMCharacterCollectionViewCellViewModel: Hashable, Equatable {
             return
         }
         //let reuqest = URLRequest(url: url)
-        RMImageLoader.shared.downLoadImage(url, completion: completion)
+        RMImageLoader.shared.downloadImage(url, completion: completion)
     }
     
     // MARK: - Hashable

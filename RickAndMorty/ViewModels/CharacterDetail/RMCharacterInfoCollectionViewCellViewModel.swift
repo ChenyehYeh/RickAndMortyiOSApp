@@ -5,22 +5,20 @@
 //  Created by Chenyeh Yeh on 2/3/23.
 //
 
+
 import UIKit
 
 final class RMCharacterInfoCollectionViewCellViewModel {
     private let type: `Type`
-    
     private let value: String
-    
+
     static let dateFormatter: DateFormatter = {
-        // Format
-        // 2017-11-04T18:48:46.250Z
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSZ"
         formatter.timeZone = .current
         return formatter
     }()
-    
+
     static let shortDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -29,31 +27,29 @@ final class RMCharacterInfoCollectionViewCellViewModel {
         return formatter
     }()
 
-    
-    public var title: String{
+    public var title: String {
         type.displayTitle
     }
-    
-    public var displayTitle: String{
+
+    public var displayValue: String {
         if value.isEmpty { return "None" }
 
-        
         if let date = Self.dateFormatter.date(from: value),
-            type == .created {
+           type == .created {
             return Self.shortDateFormatter.string(from: date)
         }
-        
+
         return value
     }
-    
+
     public var iconImage: UIImage? {
         return type.iconImage
     }
-    
+
     public var tintColor: UIColor {
         return type.tintColor
     }
-    
+
     enum `Type`: String {
         case status
         case gender
@@ -62,9 +58,8 @@ final class RMCharacterInfoCollectionViewCellViewModel {
         case origin
         case created
         case location
-        case epsiodeCount
-        
-        
+        case episodeCount
+
         var tintColor: UIColor {
             switch self {
             case .status:
@@ -81,11 +76,11 @@ final class RMCharacterInfoCollectionViewCellViewModel {
                 return .systemPink
             case .location:
                 return .systemYellow
-            case .epsiodeCount:
+            case .episodeCount:
                 return .systemMint
             }
         }
-            
+
         var iconImage: UIImage? {
             switch self {
             case .status:
@@ -102,11 +97,11 @@ final class RMCharacterInfoCollectionViewCellViewModel {
                 return UIImage(systemName: "bell")
             case .location:
                 return UIImage(systemName: "bell")
-            case .epsiodeCount:
+            case .episodeCount:
                 return UIImage(systemName: "bell")
             }
         }
-        
+
         var displayTitle: String {
             switch self {
             case .status,
@@ -117,14 +112,13 @@ final class RMCharacterInfoCollectionViewCellViewModel {
                 .created,
                 .location:
                 return rawValue.uppercased()
-            case .epsiodeCount:
+            case .episodeCount:
                 return "EPISODE COUNT"
             }
         }
     }
-    
-    
-    init (type: `Type`, value: String) {
+
+    init(type: `Type`, value: String) {
         self.value = value
         self.type = type
     }
