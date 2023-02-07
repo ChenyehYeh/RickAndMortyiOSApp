@@ -1,5 +1,5 @@
 //
-//  RMEipsode.swift
+//  RMEpisode.swift
 //  RickAndMorty
 //
 //  Created by Chenyeh Yeh on 1/12/23.
