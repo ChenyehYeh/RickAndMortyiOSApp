@@ -10,7 +10,7 @@ import UIKit
 /// VC to show details about single episode
 final class RMEpisodeDetailViewController: UIViewController {
 
-    private let viewModel: RMEpisodeDetailViewModel
+    private let viewModel: RMEpisodeDetailViewViewModel
     
     //MARK: - Init
     init(url: URL?) {

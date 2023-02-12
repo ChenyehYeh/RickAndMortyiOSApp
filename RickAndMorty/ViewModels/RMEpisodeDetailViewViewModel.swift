@@ -1,5 +1,5 @@
 //
-//  RMEpisodeDetailViewModel.swift
+//  RMEpisodeDetailViewViewModel.swift
 //  RickAndMorty
 //
 //  Created by Chenyeh Yeh on 2/9/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RMEpisodeDetailViewModel {
+final class RMEpisodeDetailViewViewModel {
     private let endpointUrl: URL?
     
     init(endpointUrl: URL?) {
@@ -25,7 +25,7 @@ final class RMEpisodeDetailViewModel {
             switch result {
             case .success(let success):
                 print(String(describing: success))
-            case .failure(let failure):
+            case .failure:
                 break
             }
         }
