@@ -94,11 +94,11 @@ final class RMCharacterInfoCollectionViewCellViewModel {
             case .origin:
                 return UIImage(systemName: "bell")
             case .created:
-                return UIImage(systemName: "bell")
+                return UIImage(systemName: "calendar")
             case .location:
-                return UIImage(systemName: "bell")
+                return UIImage(systemName: "location")
             case .episodeCount:
-                return UIImage(systemName: "bell")
+                return UIImage(systemName: "number.square")
             }
         }
 
