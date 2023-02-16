@@ -19,8 +19,14 @@ final class RMEpisodeDetailViewViewModel {
             delegate?.didFetchEpisodeDetails()
         }
     }
+    enum SectionType {
+        case information(viewModels: [RMEpisodeInfoCollectionViewCellViewModel])
+        case characters(viewModel: [RMCharacterCollectionViewCellViewModel])
+    }
     
     public weak var delegate: RMEpisodeDetailViewViewModelDelegate?
+    
+    public private(set) var section: [SectionType] = []
     
     
     // MARK: - Init
