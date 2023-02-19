@@ -21,13 +21,13 @@ final class RMLocationViewController: UIViewController, RMLocationViewViewModelD
         view.addSubview(primaryView)
         view.backgroundColor = .systemBackground
         title = "Locations"
-        addSearchButtom()
+        addSearchButton()
         addConstraints()
         viewModel.delegate = self
         viewModel.fetchLocations()
     }
     
-    private func addSearchButtom() {
+    private func addSearchButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(didTapSearch))
     }
     
