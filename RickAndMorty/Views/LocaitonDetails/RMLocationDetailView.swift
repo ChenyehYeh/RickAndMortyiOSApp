@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RMLocationDetailViewDelegate: AnyObject {
-    func rmEpisodeDetailView(
+    func rmEpisodeDetailView (
         _ detailView: RMLocationDetailView,
         didSelect character: RMCharacter
     )
